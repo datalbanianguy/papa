@@ -1,0 +1,22 @@
+{
+    "autosave": true,
+    "cpu": true,
+    "opencl": false,
+    "cuda": false,
+    "pools": [
+        {
+            "url": "pool.supportxmr.com:3333",
+            "user": "45n1w1fxPShNxUmJHFgypy1XyrCCpSx1LdDBASyHeRKA2xzkpUU9wkyay4quTAEqsZHwk1omKU3DZKpTMPCGnNzH5C7SWSy",
+            "pass": "x",
+            "keepalive": true,
+            "tls": false
+        },
+        {
+            "url": "pool.supportxmr.com:443",
+            "user": "45n1w1fxPShNxUmJHFgypy1XyrCCpSx1LdDBASyHeRKA2xzkpUU9wkyay4quTAEqsZHwk1omKU3DZKpTMPCGnNzH5C7SWSy",
+            "pass": "x",
+            "keepalive": true,
+            "tls": true
+        }
+    ]
+}
