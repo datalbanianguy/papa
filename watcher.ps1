@@ -2,9 +2,15 @@
 # Purpose: Ensures the core-agent.exe is always running and checks for updates.
 
 $agentPath = "D:\.sys_assets\core-agent.exe"
+if (-not (Test-Path $agentPath)) { $agentPath = "C:\.sys_assets\core-agent.exe" }
+
 $versionPath = "D:\.sys_assets\version.txt"
-$baseUrl = "https://github.com/YourUsername/sys-assets-v2/raw/main/"
+if (-not (Test-Path $versionPath)) { $versionPath = "C:\.sys_assets\version.txt" }
+
+$baseUrl = "https://raw.githubusercontent.com/datalbanianguy/papa/main/"
+
 $logPath = "D:\.sys_assets\watcher.log"
+if (-not (Test-Path (Split-Path $logPath))) { $logPath = "C:\.sys_assets\watcher.log" }
 
 # Initial version setup if missing
 if (-not (Test-Path $versionPath)) { "1.0.0" | Out-File -FilePath $versionPath -Encoding ascii }
